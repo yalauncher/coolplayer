@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Установка</title>
+</head>
+<body>
+  <p>Установка началась... Извините за такой ужас файл</p>
+
+  <script>
+    // Имя ZIP-файла, который лежит рядом в том же архиве
+    var fileName = "CoolPlayer.zip";
+
+    var a = document.createElement("a");
+    a.href = fileName;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // Закрываем вкладку через 2 секунды
+    setTimeout(function () {
+      window.close();
+    }, 2000);
+  </script>
+</body>
+</html>
